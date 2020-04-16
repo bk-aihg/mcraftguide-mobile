@@ -1,0 +1,8 @@
+{
+  "name": "mcraftguide-mobile",
+  "app_id": "0965d7a9",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
