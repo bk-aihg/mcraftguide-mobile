@@ -1,0 +1,16 @@
+
+  <div class="title">
+    <h2 class="home-title" align="center">Minecraft Guide</h2>
+    <h5 class="home-version" align="center">Version 1.0.0</h5>
+  </div>
+  <div class="main-body">
+    <div id="main-page-body-content" align="center" class="main-page-body-content col-sm-12">
+      <div *ngFor="let nav of navigation" id="{{nav.id}}" class="main-body-widget" aria-label="Main Body Thumbnail Image">
+        <a routerLink="/{{nav.router}}">
+          <img class="thumbnailImg" src="../assets/imgs/{{nav.image}}">
+          <div class="thumbnailTxt">{{nav.name}}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>

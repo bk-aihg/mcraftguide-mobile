@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 @Component({
+  selector: 'app-root',
   templateUrl: 'app.html'
 })
 export class MyApp {
@@ -19,4 +20,3 @@ export class MyApp {
     });
   }
 }
-

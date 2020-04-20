@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,266 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.background {
+  background: url("../assets/imgs/background.png") 0 0/100% 100% no-repeat;
+}
+
+.title {
+  padding-top: 50px;
+}
+
+.home-title {
+  color: white;
+}
+
+.home-version {
+  color: white;
+}
+
+.main-page-body-title {
+  text-shadow: 1px 1px;
+  padding-top: 100px;
+  text-align: center;
+  color: white;
+}
+
+.main-body {
+  overflow: hidden;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.main-page-body-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  display: table-row;
+}
+
+.main-body-widget {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: solid black;
+  margin-top: 1em;
+  margin-right: 1em;
+  border: 10px solid black;
+  box-shadow: 0 -1px 20px 10px;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.thumbnailImg {
+  width: 60px;
+  height: 60px;
+}
+
+.thumbnailTxt {
+  padding-top: 10px;
+  color: white;
+  font: 0.6em;
+}
+
+.main-body-widget:hover {
+  border: 5px solid black;
+  box-shadow: 0 -1px 20px 10px;
+}
+
+.header-home-image {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 80px;
+  background: none;
+  cursor: pointer;
+  color: orange;
+}
+// Crafting Page
+.crafting {
+  display: block;
+  flex-wrap: wrap;
+  // padding-top: 25px;
+  // margin-left: 100px;
+  margin-right: 100px;
+  align-content: center;
+  height: auto;
+}
+
+.node {
+  display: inline-block;
+  margin-right: 1em;
+  margin-top: 25px;
+  height: 50px;
+  // width: 370px;
+  cursor: pointer;
+  border: 10px solid black;
+  box-shadow: 0 -1px 8px 4px;
+}
+
+.childNode {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 50px;
+  // width: 340px;
+  border: 10px solid black;
+  box-shadow: 0 -1px 8px 4px;
+}
+
+.name {
+  padding: 0;
+  color: #ffffff;
+}
+
+.number {
+  float: right;
+  // padding-right: 10px;
+  color: #ffffff;
+}
+
+.craftImg {
+  width: 25px;
+  height: 25px;
+}
+
+.hideChildren > div {
+  display: none;
+}
+// Blog Page
+.blog {
+  display: grid;
+  // padding-top: 25px;
+  // margin-left: 20px;
+  // margin-right: 20px;
+  align-content: center;
+  height: auto;
+  border: white;
+}
+
+.blogNode {
+  display: grid;
+  margin-right: 5px;
+  margin-top: 15px;
+  margin-left: 5px;
+  height: auto;
+  // width: 370px;
+  cursor: pointer;
+  border: 10px solid black;
+  box-shadow: 0 -1px 8px 4px;
+}
+
+.blogChildNode {
+  margin-top: 5px;
+  margin-left: 10px;
+  height: auto;
+  // width: 970px;
+  border: 10px solid black;
+  box-shadow: 0 -1px 8px 4px;
+}
+
+.commentNode {
+  display: block;
+  // margin-right: 5px;
+  margin-top: 15px;
+  // margin-left: 10px;
+  height: auto;
+  // width: 300px;
+  cursor: pointer;
+  border: 10px solid black;
+  box-shadow: 0 -1px 8px 4px;
+  height: auto;
+}
+
+.commentChildNode {
+  margin-top: 5px;
+  margin-left: 20px;
+  height: auto;
+  width: 770px;
+  border: 10px solid black;
+  box-shadow: 0 -1px 8px 4px;
+}
+
+.author {
+  padding: 0;
+  color: white;
+  // width: 300px;
+}
+
+.createDate {
+  padding: 0;
+  color: white;
+}
+
+.description {
+  float: left;
+  height: auto;
+  padding: 0;
+  color: white;
+}
+
+.column {
+  width: 33.33%;
+}
+
+.addBlogImage {
+  float: right;
+  padding-right: 20px;
+  color: orange;
+}
+
+.addBlog {
+  float: left;
+  left: 30%;
+  height: auto;
+}
+
+.addBlog-input-box {
+  font-color: white;
+  padding-left: 30px;
+  padding-top: 150px;
+  height: auto;
+}
+
+.addBlog-form {
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+  .label {
+    color: white;
+  }
+
+  .input {
+    float: right;
+    margin-right: 350px;
+    background-color: grey;
+    border: none;
+  }
+
+  .submit {
+    float: right;
+    text-align: center;
+    margin-right: 350px;
+    background-color: orange;
+    border: none;
+    width: 170px;
+    cursor: pointer;
+  }
+
+  .cancel {
+    float: right;
+    text-align: center;
+    margin-right: 350px;
+    background-color: orange;
+    border: none;
+    width: 170px;
+    cursor: pointer;
+  }
+}
+
+.hideChildren > div {
+  display: none;
+}
