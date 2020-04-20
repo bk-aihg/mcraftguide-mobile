@@ -1,41 +1,45 @@
 <!-- Generated template for the BlogComponent component -->
-<div class="col-sm-12">
-  <a href="">
-    <i class="fa fa-home fa-3x header-home-image" aria-hidden="true"></i>
-  </a>
-</div>
-<div id="blog" class="blog col-sm-6">
-  <div class="blogNode row">
-    <div class="col-sm-6=">
-      <span class="createDate" style="padding-left:10px;">Add Blog</span>
-      <span (click)="openBlogDialog()">
-        <i class="fa fa-2x fa-plus addBlogImage"></i>
-      </span>
-    </div>
+<ion-content class="background">
+  <div class="col-sm-12">
+    <a href="">
+      <i class="fa fa-home fa-3x header-home-image" aria-hidden="true"></i>
+    </a>
   </div>
-  <div *ngFor="let blog of blogs" aria-label="blog" id="parent-{{blog.blogId}}" class="blogNode row" (click)="ele.class = ele.class == 'showChildren' ? '' :  'showChildren'" #ele>
-    <div class="col-sm-6"><span class="name">{{blog.title}}</span></div>
-    <div class="col-sm-6">
-      <span class="author">{{blog.author}}</span>
-      <span class="createDate">{{blog.date}}</span>
-    </div>
-    <div id="child-{{blog.blogId}}" class="blogNode" [ngClass]="{ hideChildren : ele.class !== 'showChildren' }">
-      <div style="col-sm-6">
-        <span class="description">{{blog.description}}</span>
-      </div>
-      <div class="commentNode">
-        <span class="createDate" style="padding-right:100px;">Add Comments</span>
-        <span (click)="openCommentDialog(blog.blogId)">
+  <div id="blog" class="blog col-sm-6">
+    <div class="blogNode row">
+      <div class="col-sm-6=">
+        <span class="createDate" style="padding-left:10px;">Add Blog</span>
+        <span (click)="openBlogDialog()">
           <i class="fa fa-2x fa-plus addBlogImage"></i>
         </span>
       </div>
-      <div *ngFor="let comment of blog.comments" class="commentNode">
-        <div class="col-sm-6"><span class="name">{{comment.description}}</span></div>
-        <div class="col-sm-6">
-          <span class="author">{{comment.author}}</span>
-          <span class="createDate">{{comment.date}}</span>
+    </div>
+
+    <div *ngFor="let blog of blogs" aria-label="blog" id="parent-{{blog.blogId}}" class="blogNode row" (click)="ele.class = ele.class == 'showChildren' ? '' :  'showChildren'" #ele>
+      <div class="col-sm-6"><span class="name">{{blog.title}}</span></div>
+      <div class="col-sm-6">
+        <span class="author">{{blog.author}}</span>
+        <span class="createDate">{{blog.date}}</span>
+      </div>
+      <div id="child-{{blog.blogId}}" class="blogNode" [ngClass]="{ hideChildren : ele.class !== 'showChildren' }">
+        <div style="col-sm-6">
+          <span class="description">{{blog.description}}</span>
+        </div>
+        <div class="commentNode">
+          <span class="createDate" style="padding-right:100px;">Add Comments</span>
+          <span (click)="openCommentDialog(blog.blogId)">
+            <i class="fa fa-2x fa-plus addBlogImage"></i>
+          </span>
+        </div>
+        <div *ngFor="let comment of blog.comments" class="commentNode">
+          <div class="col-sm-6"><span class="name">{{comment.description}}</span></div>
+          <div class="col-sm-6">
+            <span class="author">{{comment.author}}</span>
+            <span class="createDate">{{comment.date}}</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+</ion-content>

@@ -13,6 +13,10 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+
+.content-ios {
+    color: gray;
+}
 .background {
   background: url("../assets/imgs/background.png") 0 0/100% 100% no-repeat;
 }
@@ -220,6 +224,12 @@
 .addBlogImage {
   float: right;
   padding-right: 20px;
+  color: orange;
+}
+
+.shareImage {
+  float: right;
+  padding-left: 20px;
   color: orange;
 }
 
