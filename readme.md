@@ -1,4 +1,5 @@
 **About App**
+
 There is a lot of information available over the internet about Minecraft, but it is scattered all over the place and it gets very difficult to search and find the right information that you are looking for.
 The application serves as a single place for Minecraft games lovers.
 Currently the app serves two main pages Crafting and Blog, more pages to be added in future.
@@ -10,7 +11,11 @@ Blog - Blog page provides users to create blogs and collaborated with other user
 **Architecture Details**
 
 UI - Ionic and Angular
+
 Backend - Symfony
+
 Web Server - Nginx
+
 App Server - Php-Fpm
+
 Hosting (Backend) - AWS
