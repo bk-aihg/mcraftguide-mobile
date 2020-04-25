@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CraftingComponent } from './crafting/crafting';
-import { BlogComponent } from './blog/blog';
+// import { CraftingComponent } from './crafting/crafting';
+// import { BlogComponent } from './blog/blog';
 @NgModule({
-	declarations: [CraftingComponent,
-    BlogComponent],
+	declarations: [],
 	imports: [],
-	exports: [CraftingComponent,
-    BlogComponent]
+	exports: []
 })
 export class ComponentsModule {}

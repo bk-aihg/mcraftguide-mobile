@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { map, catchError } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs/Observable';
 
 /*
@@ -12,15 +12,21 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class AppDataProvider {
 
+  baseUrl = "https://mcraftguide.com"
+
   constructor(public http: HttpClient) {
   }
 
   getCraftItems(): Observable<any> {
-    return this.http.get('http://18.209.75.49/api/crafting').pipe();
+    return this.http.get(this.baseUrl+"/api/crafting").pipe(
+      map(this.extractData)
+    );
   }
 
   getBlogs(): Observable<any> {
-    return this.http.get('http://18.209.75.49/api/blog').pipe();
+    return this.http.get(this.baseUrl+"/api/blog").pipe(
+      map(this.extractData)
+    );
   }
 
   postBlog(title, author, description) {
@@ -31,7 +37,7 @@ export class AppDataProvider {
     blog['description'] = description;
     blog['comments'] = [];
 
-    this.http.post('http://18.209.75.49/api/blog', blog).subscribe(res => {
+    this.http.post(this.baseUrl+"/api/blog", blog).subscribe(res => {
       console.log(res);
     });;
 
@@ -43,28 +49,17 @@ export class AppDataProvider {
     comment['description'] = data.comment;
     comment['author'] = data.author;
 
-    let url = 'http://18.209.75.49/api/blog/'+blogId+'/comments';
+    let url = this.baseUrl+"/api/blog/"+blogId+"/comments";
     this.http.post(url, comment).subscribe(res => {
       console.log(res);
     });;
 
   }
 
-  // private extractData(res: Response){
-  //   let body = res;
-  //   return body || [];
-  // }
-  //
-  //
-  // private handleError(error: Response | any){
-  //   let errMsg: string;
-  //   if (error instanceof Response){
-  //     const err = error || '';
-  //     errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-  //   } else {
-  //     errMsg = error.message ? error.message : error.toString();
-  //   }
-  //   return errMsg;
-  // }
+  private extractData(res: Response){
+    let body = res;
+    return body;
+  }
+
 
 }

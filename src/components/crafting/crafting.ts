@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { AppDataProvider } from '../../providers/app-data/app-data'
 
@@ -19,17 +20,29 @@ export class CraftingComponent {
   childItems = [];
   showChild;
 
-  constructor(public dataService: AppDataProvider) {
+  constructor(public dataService: AppDataProvider, public socialSharing: SocialSharing) {
     this.loadItems();
   }
 
-  loadItems(){
+  loadItems() {
     this.dataService.getCraftItems()
       .subscribe(items => this.items = items);
   }
 
-  toggleChild(child){
-    var id = 'parent-'+child.itemId;
+  shareItem(item, index) {
+    console.log('bk')
+
+    let message = "Craftin Item Details - " + item;
+
+    this.socialSharing.share(message).then(() => {
+      console.log("Shared Succcessfully")
+    }).catch((error) => {
+      console.error("Error while sharring ", error)
+    });
+  }
+
+  toggleChild(child) {
+    var id = 'parent-' + child.itemId;
     var c = document.getElementById(id)
     var d = c.getElementsByClassName("childNode");
 
